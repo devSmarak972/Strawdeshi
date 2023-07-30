@@ -11,25 +11,37 @@ from django.contrib.auth.forms import AuthenticationForm #add this
 # Create your views here.
 def home(request):
 	return render(request,"home.html",{})
-def login(request):
+def login_user(request):
 	if request.method == "POST":
-		form = AuthenticationForm(request, data=request.POST)
-		if form.is_valid():
-			email = form.cleaned_data.get('email')
-			password = form.cleaned_data.get('password')
+		if "email" in request.POST and "password" in request.POST:
+			email = request.POST['email']
+			password = request.POST['password']
 			user = authenticate(email=email, password=password)
 			if user is not None:
-				login(request, user)
-				messages.info(request, f"You are now logged in as {username}.")
-				return redirect("")
+					login(request, user)
+					print("logged in")
+					messages.info(request, f"You are now logged in as {user.first_name}.")
+					return redirect("/")
 			else:
-				messages.error(request,"Invalid username or password.")
-		else:
-			messages.error(request,"Invalid username or password.")
-	form = AuthenticationForm()
-	return render(request=request, template_name="login.html", context={"login_form":form})
+					messages.error(request,"Invalid username or password.")
+		
+	return render(request=request, template_name="login.html", context={"messages":messages})
+# def login_user(request):
+#     logout(request)
+#     username = password = ''
+#     if request.POST:
+		
+#         username = request.POST['username']
+#         password = request.POST['password']
 
-def register(request):
+#         user = authenticate(username=username, password=password)
+#         if user is not None:
+#             if user.is_active:
+#                 login(request, user)
+#                 return HttpResponseRedirect('/main/')
+#     return render_to_response('login.html', context_instance=RequestContext(request))
+
+def register_user(request):
 	if request.method == "POST":
 		print(request.POST,request)
 		form = CustomUserCreationForm(request.POST)
@@ -38,7 +50,7 @@ def register(request):
 			print("valid")
 			login(request, user)
 			messages.success(request, "Registration successful." )
-			return redirect("")
+			return redirect("/")
 		print(form.errors)
 		messages.error(request, "Unsuccessful registration. Invalid information.")
 	form = CustomUserCreationForm()

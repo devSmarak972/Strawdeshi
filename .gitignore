@@ -1,0 +1,4 @@
+env
+strawdeshi/mainapp/migrations
+*.pyc
+*/db.sqlite3

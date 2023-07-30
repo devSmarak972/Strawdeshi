@@ -1,0 +1,1261 @@
+{% extends "base.html" %}
+{% load static %}
+{% block preloader %}
+<div id="dsn_preloader" class="preloader">
+   <div class="dsnload p-absolute">
+      <span class="dsnload__row">
+      <span class="dsnload__img">
+      <img src="{% static 'assets/img/logo-light.png' %}" class="logo-dark" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      <img src="{% static 'assets/img/logo.png' %}" class="logo-light" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      </span>
+      </span>
+      <span class="dsnload__row dsnload__row--sibling">
+      <span class="dsnload__img">
+      <img src="{% static 'assets/img/logo-light.png' %}" class="logo-dark" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      <img src="{% static 'assets/img/logo.png' %}" class="logo-light" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      </span>
+      </span>
+      <span class="dsnload__row dsnload__row--sibling">
+      <span class="dsnload__img">
+      <img src="{% static 'assets/img/logo-light.png' %}" class="logo-dark" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      <img src="{% static 'assets/img/logo.png' %}" class="logo-light" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      </span>
+      </span>
+      <span class="dsnload__row dsnload__row--sibling">
+      <span class="dsnload__img">
+      <img src="{% static 'assets/img/logo-light.png' %}" class="logo-dark" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      <img src="{% static 'assets/img/logo.png' %}" class="logo-light" alt="StrawDeshi" decoding="async" loading="lazy"/>
+      </span>
+      </span>
+   </div>
+   <svg width="100%" height="100%" viewBox="0 0 100 100" class="v-middle" preserveAspectRatio="xMinYMin meet"
+      fill="none">
+      <linearGradient id="linearColors" x1="0" y1="0" x2="1" y2="1">
+         <stop offset="0%" stop-color="var(--theme-color)"></stop>
+         <stop offset="50%" stop-color="var(--border-color)"></stop>
+         <stop offset="100%" stop-color="var(--assistant-color)"></stop>
+      </linearGradient>
+      <path class="dsn-progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+   </svg>
+   <div class="loading-circle v-middle">
+      <p class="loading-count v-middle">0</p>
+   </div>
+   <span class="loading-text text-uppercase mt-30 dsn-container">Loading ...</span>
+   <div class="bg-load background-section d-flex align-items-end">
+      <svg class="dsn-separator-bottom dsn-icon-assistant-color" width="100%" height="100%" viewBox="0 0 100 10"
+         preserveAspectRatio="none">
+         <path class="path-anim separator__path" data-dsn-to="M 0 0 C 40 0 55 0 100 0 L 0 0 Z"
+            vector-effect="non-scaling-stroke" d="M 0 0 C 40 16 75 10 100 0 L 0 0 Z"></path>
+      </svg>
+   </div>
+</div>
+{% endblock %}
+{% block menu %}
+<!-- ========== Menu ========== -->
+<header id="site_menu_header" class="site-header  dsn-container d-none dsn-hamburger">
+   
+   <div class="main-logo">
+      <a href="#" data-dsn-text="StrawDeshi" class="custom-logo-link main-brand effect-ajax" rel="home"
+         aria-current="page">
+      <img src="{% static 'general/img/logo.png' %}" class="custom-logo logo-light" alt="StrawDeshi"/>
+      <img src="{% static 'general/img/logo.png' %}" class="custom-logo logo-dark" alt="StrawDeshi"/>
+      </a>
+   </div>
+   
+   <nav class="main-navigation p-10">
+      <div class="menu-cover-title header-container dsn-container">MENU</div>
+      <ul id="dsn-primary-list" class="primary-nav h2">
+         <li class="nav-item has-sub-menu">
+            <a title="Home" href="#">
+            <span class="overflow ">Home</span>
+            </a>
+            <ul class="nav-item">
+               <li class="dsn-back">
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                        viewBox="0 0 400.004 400.004" xml:space="preserve">
+                        <g>
+                           <path
+                              d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                        </g>
+                     </svg>
+                     <span class="text-toggle-back">
+                     <span class="text-name">Home</span>
+                     <span class="text-back">Back</span>
+                     </span>
+                  </span>
+               </li>
+               <li class="nav-item ">
+                  <a title="Home" href="#">
+                  <span class="overflow">Main Demo</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Business" href="#" data-dsn-text="Business">
+                  <span class="overflow">Business</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Architecture" href="#" data-dsn-text="Architecture">
+                  <span class="overflow">Architecture</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Personal" href="#" data-dsn-text="Personal">
+                  <span class="overflow">Personal</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Photographer" href="#" data-dsn-text="Photographer">
+                  <span class="overflow">Photographer</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Resume" href="#" data-dsn-text="Resume">
+                  <span class="overflow">Resume</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Portfolio" href="#" data-dsn-text="Our Portfolio">
+                  <span class="overflow">Metro Portfolio 1</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Portfolio" href="#" data-dsn-text="Our Portfolio">
+                  <span class="overflow">Metro Portfolio 2</span>
+                  </a>
+               </li>
+            </ul>
+         </li>
+         <li class="nav-item has-sub-menu">
+            <a title="Home" href="#">
+            <span class="overflow ">Products</span>
+            </a>
+            <ul class="nav-item">
+               <li class="dsn-back">
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                        viewBox="0 0 400.004 400.004" xml:space="preserve">
+                        <g>
+                           <path
+                              d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                        </g>
+                     </svg>
+                     <span class="text-toggle-back">
+                     <span class="text-name">Products</span>
+                     <span class="text-back">Back</span>
+                     </span>
+                  </span>
+               </li>
+               <li class="nav-item has-sub-menu">
+                  <a title="Carousel" href="#" data-dsn-text="Business">
+                  <span class="overflow">Winter Fashion</span>
+                  </a>
+                  <ul class="nav-item">
+                     <li class="dsn-back">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                              viewBox="0 0 400.004 400.004" xml:space="preserve">
+                              <g>
+                                 <path
+                                    d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                              </g>
+                           </svg>
+                           <span class="text-toggle-back">
+                           <span class="text-name">Winterwear</span>
+                           <span class="text-back">Back</span>
+                           </span>
+                        </span>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="Carousel Portfolio 1" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Jackets</span>
+                        </a>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="Carousel Portfolio" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Sweaters</span>
+                        </a>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="Carousel Portfolio 3" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Hoodies</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="nav-item has-sub-menu">
+                  <a title="Carousel" href="#" data-dsn-text="Business">
+                  <span class="overflow">Womens Fashion</span>
+                  </a>
+                  <ul class="nav-item">
+                     <li class="dsn-back">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                              viewBox="0 0 400.004 400.004" xml:space="preserve">
+                              <g>
+                                 <path
+                                    d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                              </g>
+                           </svg>
+                           <span class="text-toggle-back">
+                           <span class="text-name">Sliders</span>
+                           <span class="text-back">Back</span>
+                           </span>
+                        </span>
+                     </li>
+                     <li class="nav-item has-sub-menu">
+                        <a title="Slider" href="#" data-dsn-text="Our Portfolio">
+                        <span class="overflow">Fullscreen</span>
+                        </a>
+                        <ul class="nav-item">
+                           <li class="dsn-back">
+                              <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                                    viewBox="0 0 400.004 400.004" xml:space="preserve">
+                                    <g>
+                                       <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                                    </g>
+                                 </svg>
+                                 <span class="text-toggle-back">
+                                 <span class="text-name">Fullscreen</span>
+                                 <span class="text-back">Back</span>
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="nav-item ">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Distortion / H</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Distortion / V</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Parallax / H</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Parallax / V</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav-item has-sub-menu">
+                        <a title="Slider" href="#" data-dsn-text="Our Portfolio">
+                        <span class="overflow">Padding</span>
+                        </a>
+                        <ul class="nav-item">
+                           <li class="dsn-back">
+                              <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                                    viewBox="0 0 400.004 400.004" xml:space="preserve">
+                                    <g>
+                                       <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                                    </g>
+                                 </svg>
+                                 <span class="text-toggle-back">
+                                 <span class="text-name">Padding</span>
+                                 <span class="text-back">Back</span>
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="nav-item ">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Distortion / H</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Distortion / V</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Parallax / H</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Parallax / V</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav-item has-sub-menu">
+                        <a title="Slider" href="#" data-dsn-text="Our Portfolio">
+                        <span class="overflow">Halfscreen</span>
+                        </a>
+                        <ul class="nav-item">
+                           <li class="dsn-back">
+                              <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                                    viewBox="0 0 400.004 400.004" xml:space="preserve">
+                                    <g>
+                                       <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                                    </g>
+                                 </svg>
+                                 <span class="text-toggle-back">
+                                 <span class="text-name">Halfscreen</span>
+                                 <span class="text-back">Back</span>
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="nav-item ">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Distortion / H</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Distortion / V</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Parallax / H</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a title="Slider" href="#"
+                                 data-dsn-text="Our Portfolio">
+                              <span class="overflow">Slider Parallax / V</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li class="nav-item has-sub-menu">
+                  <a title="Card" href="#" data-dsn-text="Portfolio">
+                  <span class="overflow">Men's Fashion</span>
+                  </a>
+                  <ul class="nav-item">
+                     <li class="dsn-back">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                              viewBox="0 0 400.004 400.004" xml:space="preserve">
+                              <g>
+                                 <path
+                                    d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                              </g>
+                           </svg>
+                           <span class="text-toggle-back">
+                           <span class="text-name">Card</span>
+                           <span class="text-back">Back</span>
+                           </span>
+                        </span>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="work card 1" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Work Card 1</span>
+                        </a>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="work card 2" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Work Card 2</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="nav-item has-sub-menu">
+                  <a title="Card" href="#" data-dsn-text="Portfolio">
+                  <span class="overflow">Clothing & Fashion Accesories</span>
+                  </a>
+                  <ul class="nav-item">
+                     <li class="dsn-back">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                              viewBox="0 0 400.004 400.004" xml:space="preserve">
+                              <g>
+                                 <path
+                                    d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                              </g>
+                           </svg>
+                           <span class="text-toggle-back">
+                           <span class="text-name">Classic</span>
+                           <span class="text-back">Back</span>
+                           </span>
+                        </span>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="work classic 1" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Work classic 1</span>
+                        </a>
+                     </li>
+                     <li class="nav-item ">
+                        <a title="work classic 2" href="#"
+                           data-dsn-text="Our Portfolio">
+                        <span class="overflow">Work classic 2</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+ 
+            </ul>
+         </li>
+         <li class="nav-item has-sub-menu">
+            <a title="Home" href="#">
+            <span class="overflow ">About</span>
+            </a>
+            <ul class="nav-item">
+               <li class="dsn-back">
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                        viewBox="0 0 400.004 400.004" xml:space="preserve">
+                        <g>
+                           <path
+                              d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                        </g>
+                     </svg>
+                     <span class="text-toggle-back">
+                     <span class="text-name">Works</span>
+                     <span class="text-back">Back</span>
+                     </span>
+                  </span>
+               </li>
+               <li class="nav-item ">
+                  <a title="VISIONAID" href="#" data-dsn-text="VISIONAID">
+                  <span class="overflow">VISIONAID</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="MEN FASHION" href="#" data-dsn-text="MEN FASHION">
+                  <span class="overflow">MEN FASHION</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="AUDI RS" href="#" data-dsn-text="AUDI RS">
+                  <span class="overflow">AUDI RS</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="OPEN RUN" href="#" data-dsn-text="OPEN RUN">
+                  <span class="overflow">OPEN RUN</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="DOG CHOW" href="#" data-dsn-text="DOG CHOW">
+                  <span class="overflow">DOG CHOW</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="HEADPHONES" href="#" data-dsn-text="HEADPHONES">
+                  <span class="overflow">HEADPHONES</span>
+                  </a>
+               </li>
+            </ul>
+         </li>
+         <li class="nav-item has-sub-menu">
+            <a title="Home" href="#">
+            <span class="overflow ">Store</span>
+            </a>
+            <ul class="nav-item">
+               <li class="dsn-back">
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px"
+                        viewBox="0 0 400.004 400.004" xml:space="preserve">
+                        <g>
+                           <path
+                              d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"/>
+                        </g>
+                     </svg>
+                     <span class="text-toggle-back">
+                     <span class="text-name">Blog</span>
+                     <span class="text-back">Back</span>
+                     </span>
+                  </span>
+               </li>
+               <li class="nav-item ">
+                  <a title="Stories" href="#" data-dsn-text="Stories">
+                  <span class="overflow">Stories</span>
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a title="Single Post" href="#" data-dsn-text="Single Post">
+                  <span class="overflow">Single Post</span>
+                  </a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="nav-item ">
+            <a title="Home" href="#">
+            <span class="overflow">Contact</span>
+            </a>
+         </li>
+         
+      </ul>
+      <div class="container-content  d-flex flex-column justify-content-center section-margin">
+         <div class="nav__info">
+            <div class="nav-content">
+               <h5 class="sm-title-block mb-10">Address</h5>
+               Rajendra Prasad Hall of Residence<br/>
+                        Indian Institute of Technology Kharagpur<br/>
+                        West Midnapore<br/>
+                        West Bengal<br/>
+                        India
+            </div>
+            <div class="nav-content mt-30">
+               <h5 class="sm-title-block mb-10">Contact</h5>
+               <p class="links over-hidden mb-1">
+                <p><strong>E</strong> : <a class="link-hover" href="#"
+                    data-hover-text="daivik.agarwal@kgpian.iitkgp.ac.in">daivik.agarwal@kgpian.iitkgp.ac.in</a></p>
+                 <p class="mt-10"><strong>E</strong> : <a class="link-hover" href="#"
+                    data-hover-text="tanishq.mittal@kgpian.iitkgp.ac.in">tanishq.mittal@kgpian.iitkgp.ac.in</a></p>
+                 <p class="mt-10"><strong>E</strong> : <a class="link-hover" href="#"
+                    data-hover-text="ayushman@kgpian.iitkgp.ac.in">ayushman@kgpian.iitkgp.ac.in</a></p>
+                 <p class="over-hidden mt-10">
+                    <strong>M</strong> : <a class="link-hover" href="#"
+                       data-hover-text="+91 7008666971">+91 7008666971</a>
+               </p>
+               
+            </div>
+         </div>
+         <div class="nav-social nav-content mt-30">
+            <div class="nav-social-inner p-relative">
+               <h5 class="sm-title-block mb-10">Follow us</h5>
+               <ul style="--dsn-li-name: dsn6;">
+                  <li style="--dsn-li-index: 0;"><a href="#" target="_blank"
+                     rel="nofollow noopener noreferrer">Facebook</a></li>
+                  <li style="--dsn-li-index: 1;"><a href="#" target="_blank"
+                     rel="nofollow noopener noreferrer">Instagram</a></li>
+                  <li style="--dsn-li-index: 2;"><a href="#" target="_blank"
+                     rel="nofollow noopener noreferrer">Linkedin</a></li>
+                  <li style="--dsn-li-index: 3;"><a href="#" target="_blank"
+                     rel="nofollow noopener noreferrer">Twitter</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <div id="navbar_toggle" class="navbar-toggle">
+      <div class="toggle-icon">
+         <div class="toggle-line"></div>
+         <div class="toggle-line"></div>
+         <div class="toggle-line"></div>
+      </div>
+      <div class="toggle-text">
+         <div class="text-menu">Menu</div>
+         <div class="text-open">Open</div>
+         <div class="text-close">Close</div>
+      </div>
+   </div>
+   <div class="bg-load background-main"></div>
+   <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
+      class="bg-load dsn-svg-transition">
+      <path vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z"/>
+   </svg>
+</header>
+<!-- ========== End Menu ========== -->
+{% endblock %}
+{% block header %}
+<!-- ========== Header ========== -->
+<header id="dsn_header" class="dsn-header-animation dsn-container section-padding v-dark-head">
+   <div class="entry-header p-relative over-hidden">
+      <div id="hero_image" class="p-absolute dsn-hero-parallax-img over-hidden" data-dsn-ajax="img"
+         data-overlay="1">
+         <img src="{% static 'assets/img/items/hat_on_field.jpg' %}" class="cover-bg-img transform-3d" alt=""/>
+      </div>
+      <div id="hero_content" class="d-flex p-relative h-100 dsn-hero-parallax-title container align-items-center">
+         <div class="content p-relative ">
+            <div class="intro-project w-100">
+               <div class="intro-title ">
+                  <div id="hero_title">
+                     <h1 class="title title-xxl" data-dsn-ajax="title">
+                        <span style="font-size: 7rem;">BURN IT?</span>
+                        <span><b> WEAR IT.</b></span>
+                     </h1>
+                  </div>
+                  <p class="subtitle-meta metas p-relative mt-30 max-w470 fw-bold">
+                     A New, Sustainable Material Made of 100% organically processed rice straw.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a href="#" rel="nofollow" class="dsn-scroll-bottom"
+      data-dsn-option='{"ease": "power4.inOut" , "duration" : 1.5}'>
+      <div class="text">SCROLL</div>
+   </a>
+</header>
+<!-- ========== End Header ========== -->
+{% endblock %}
+{% block mainbody %}
+<div id="page_wrapper" class="wrapper">
+   <!-- ========== About Section ========== -->
+   <div class="about-section about-arc section-margin">
+      <div class="container d-grid grid-md-2 d-grid-no-space">
+         <div class="box-left box-padding">
+            <h2 class="title-h2 p-relative body-font  heading-color text-upper">
+               Harnessing the Ingenuity of Straw <br>for Sustainable Comfort
+            </h2>
+            <h3 class="sm-title-block mt-20 p-relative  theme-color text-upper">
+               Join us in creating a future of eco-friendly warmth and shelter.
+            </h3>
+            <p class="max-w570 mt-20">
+               At Strawdeshi, we draw inspiration from the resourceful villages that have ingeniously utilized straw to enhance their living environments. From traditional homes with thatched roofs to animal shelters ingeniously crafted with local materials, these communities have long recognized the incredible potential of straw for insulation and providing warmth to their residents.
+            </p>
+            {% comment %} 
+            <div class="mt-20">
+               <h5 class="title-block square-after d-inline-block ">Strawdeshi</h5>
+               <span class="fw-bold d-block mt-5">Digital Artisit</span>
+            </div>
+            {% endcomment %}
+            <div class="dsn-def-btn dsn-icon-heading-color mt-30 d-flex">
+               <a class="dsn-btn dsn-border border-color-default  background-section effect-ajax effect-ajax  move-circle has-icon-left"
+                  href="#" data-dsn-text="STUDIO" data-dsn="parallax">
+               <span class="dsn-icon dsn-bg-before btn-icon-left heading-color z-index-1">
+               <i class="fas fa-angle-right"></i>
+               </span>
+               <span class="title-btn p-relative  z-index-1 heading-color">DISCOVER MORE</span>
+               </a>
+            </div>
+         </div>
+         <div class="box-right box-creative p-relative">
+            <div class="p-relative border-rdu over-hidden h-100">
+               <div class="img-box-parallax h-100 w-100 before-z-index dsn-animate dsn-effect-left border-rdu"
+                  data-dsn-triggerhook="bottom"
+                  data-dsn-grid="move-up" data-overlay="1">
+                  <img src="{% static 'assets/img/items/straw_hut.jpg' %}" class="cover-bg-img has-direction"
+                     data-dsn-position="50% 0%" alt=''/>
+               </div>
+            </div>
+            <div class="img-top">
+               <img src="{% static 'assets/img/items/hat.jpg' %}" class="cover-bg-img border-rdu" alt=''/>
+            </div>
+            <div class="img-bottom">
+               <img src="{% static 'assets/img/items/hat_jacket.png' %}" class="cover-bg-img border-rdu" alt=''/>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ========== End About Section ========== -->
+   <div class="container  section-margin">
+      <div class="d-grid grid-lg-2 d-grid-no-space">
+         <div class="left-box-image mb-section">
+            <div class="box-img w-100"
+               data-dsn-animation='{"to":{"y":"120px"},"option":{"scrub":"0","start":"80%","end":"30%"},"responsive":["desktop"]}'>
+               <div class="img-box-parallax h-v-80 before-z-index w-100" data-overlay="1">
+                  <img class="cover-bg-img" src="{% static 'assets/img/items/cloth_on_straw.jpg' %}" alt=""/>
+               </div>
+            </div>
+         </div>
+         <div class="box-info background-section p-80 mt-section">
+            <div class="section-title d-flex">
+               <div class="sub-section-title">
+                  <p class="description d-inline-block p-relative  circle-before  mb-10">
+                     <span>Our Work</span>
+                  </p>
+                  <span class="title-h2 dsn-heading-title p-relative title-block-lg d-block    heading-color">
+                  <span><b>What We do </b></span>
+                  </span>
+               </div>
+            </div>
+            <p class="mt-20">
+               At Strawdeshi, we are revolutionizing the fashion industry by harnessing the power of rice straw from Indian paddy fields, preventing waste and reducing environmental impact.
+               <span class="d-block mt-10"></span>
+               Using our verified process, the straw is retted, dried, and separated into fibers. These fibers are transformed into non-woven insulation. Our sustainable insulation is then used in jackets, pillows, blankets, and more, reducing environmental impact in the fashion industry.
+               <span class="d-block mt-10"></span>
+               Join us in our mission to make a positive impact, one straw at a time.
+            </p>
+            <ul class="d-grid dsn-list mt-20" data-dsn-gap="10px 15px">
+               <li class="list-item d-flex align-items-center background-main">
+                  <span class="dsn-icon mr-15"><i class="fas fa-check" aria-hidden="true"></i></span>
+                  <p class="dsn-heading-title heading-color ">Rice straw collection to reduce waste</p>
+               </li>
+               <li class="list-item d-flex align-items-center background-main">
+                  <span class="dsn-icon mr-15"><i class="fas fa-check" aria-hidden="true"></i></span>
+                  <p class="dsn-heading-title heading-color ">Conversion of straw into sustainable fiber</p>
+               </li>
+               <li class="list-item d-flex align-items-center background-main">
+                  <span class="dsn-icon mr-15"><i class="fas fa-check" aria-hidden="true"></i></span>
+                  <p class="dsn-heading-title heading-color ">Refinement for improved uniformity and performance</p>
+               </li>
+               <li class="list-item d-flex align-items-center background-main">
+                  <span class="dsn-icon mr-15"><i class="fas fa-check" aria-hidden="true"></i></span>
+                  <p class="dsn-heading-title heading-color ">Eco-friendly alternatives: jackets, pillows, blankets</p>
+               </li>
+            </ul>
+            <div class="dsn-def-btn dsn-icon-heading-color mt-20 d-flex">
+               <a class="dsn-btn dsn-border border-color-default background-main effect-ajax has-icon-left"
+                  href="#" data-dsn-text="HEADPHONES">
+               <span class="dsn-icon dsn-bg-before btn-icon-left heading-color z-index-1">
+               <i class="fas fa-angle-right"></i>
+               </span>
+               <span class="title-btn p-relative  z-index-1 ">LEARN MORE</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ========== Service ========== -->
+   <div class="container section-margin">
+      <div class="section-title mb-70 text-center d-flex flex-column">
+         <h2 class="title-h2 text-upper">About us</h2>
+         <p class="max-w570 mt-20 border-section-bottom">
+            {% comment %} About {% endcomment %}
+         </p>
+      </div>
+      <div class="list-with-number icon-top dsn-icon-theme-color text-center">
+         <div class="dsn-service d-grid grid-md-3 grid-sm-2 dsn-masonry-grid dsn-isotope"
+            data-dsn-iconsize="80px">
+            <div class="dsn-up service-item p-relative grid-item ">
+               <div class="service-item-inner number-item h-100 background-section border-rdu">
+                  <div class="dsn-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="Layer_1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50"
+                        xml:space="preserve">
+                        <g>
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.072,40.553c0-0.932-0.062-1.868,0.013-2.794  c0.146-1.81-0.475-3.234-1.633-4.647c-1.268-1.547-2.404-3.274-3.239-5.089c-2.214-4.811-1.168-9.314,1.994-13.308  c3.294-4.164,7.795-5.363,12.816-4.145c5.08,1.233,8.364,4.637,9.375,9.721c0.67,3.365,0.388,6.819-2.079,9.689  c-0.868,1.011-1.687,2.122-2.249,3.318c-0.621,1.318-1.179,2.764-1.305,4.193c-0.222,2.52-0.048,5.071-0.133,7.605  c-0.068,2.067-2.064,4.004-4.106,4.059c-1.696,0.045-3.395,0.022-5.093,0.01c-2.438-0.018-4.307-1.811-4.394-4.262  c-0.052-1.448-0.009-2.9-0.009-4.351C18.044,40.553,18.058,40.553,18.072,40.553z M29.94,41.686c0-1.752-0.168-3.318,0.051-4.828  c0.194-1.339,0.652-2.706,1.297-3.897c0.728-1.344,1.849-2.469,2.705-3.752c3.775-5.662,2.175-12.419-3.692-15.824  c-4.225-2.452-9.512-1.524-12.7,1.058c-2.954,2.392-5.222,7.669-3.05,12.026c0.78,1.565,1.752,3.034,2.618,4.558  c0.761,1.339,1.444,2.724,2.27,4.019c0.262,0.412,0.863,0.845,1.318,0.856c1.754,0.044,3.512-0.096,5.27-0.13  c0.693-0.015,1.626-0.207,1.623,0.894c-0.003,1.088-0.926,0.904-1.626,0.908c-2.005,0.013-4.01,0.005-6.139,0.005  c0,2.522-0.13,5.002,0.05,7.458c0.103,1.41,0.977,2.499,2.635,2.528c1.346,0.024,2.692,0.075,4.039,0.059  c2.395-0.029,3.558-1.525,3.075-4.293c-2.051,0-4.161,0.048-6.266-0.036c-0.464-0.018-0.91-0.496-1.364-0.763  c0.47-0.281,0.931-0.785,1.412-0.807C25.527,41.633,27.596,41.686,29.94,41.686z"></path>
+                           <path
+                              fill-rule="evenodd" clip-rule="evenodd"
+                              style="--dsn-color-icon : var(--heading-color)"
+                              d="M12.989,10.347c-0.546,0.164-1.233,0.569-1.437,0.398  C10.38,9.76,9.294,8.665,8.257,7.536C8.094,7.359,8.201,6.679,8.414,6.484c0.216-0.197,0.87-0.252,1.07-0.074  c1.073,0.952,2.07,1.99,3.078,3.015C12.695,9.56,12.735,9.785,12.989,10.347z"></path>
+                           <path
+                              fill-rule="evenodd" clip-rule="evenodd"
+                              style="--dsn-color-icon : var(--heading-color)"
+                              d="M37.373,10.994c-0.099-0.492-0.441-1.185-0.246-1.411  c1.004-1.159,2.125-2.219,3.264-3.25c0.158-0.143,0.743-0.042,0.94,0.146c0.202,0.194,0.346,0.792,0.214,0.937  c-1.069,1.167-2.205,2.273-3.336,3.383C38.117,10.89,37.918,10.873,37.373,10.994z"></path>
+                           <path
+                              fill-rule="evenodd" clip-rule="evenodd"
+                              style="--dsn-color-icon : var(--heading-color)"
+                              d="M25.748,3.132c-0.001,0.618,0.112,1.265-0.041,1.842  c-0.103,0.389-0.58,0.678-0.889,1.013c-0.276-0.315-0.765-0.613-0.792-0.947c-0.096-1.227-0.11-2.473,0.001-3.697  c0.033-0.363,0.578-0.679,0.888-1.017c0.277,0.37,0.69,0.704,0.799,1.119C25.854,1.973,25.749,2.566,25.748,3.132z"></path>
+                           <path
+                              fill-rule="evenodd" clip-rule="evenodd"
+                              style="--dsn-color-icon : var(--heading-color)"
+                              d="M43.725,23.819c-0.406-0.043-0.854,0.003-1.205-0.158  c-0.268-0.123-0.608-0.546-0.565-0.769c0.06-0.315,0.435-0.796,0.692-0.807c1.327-0.057,2.663-0.028,3.989,0.072  c0.305,0.022,0.58,0.445,0.869,0.684c-0.339,0.265-0.655,0.713-1.021,0.758c-0.905,0.11-1.835,0.036-2.755,0.036  C43.728,23.696,43.726,23.758,43.725,23.819z"></path>
+                           <path
+                              fill-rule="evenodd" clip-rule="evenodd"
+                              style="--dsn-color-icon : var(--heading-color)"
+                              d="M3.5,24.01c-0.448-0.367-0.896-0.733-1.343-1.101  c0.493-0.293,0.963-0.779,1.482-0.837c0.958-0.106,1.954-0.026,2.915,0.112c0.416,0.061,0.783,0.457,1.172,0.701  c-0.37,0.255-0.72,0.687-1.113,0.731c-0.962,0.107-1.945,0.035-2.92,0.035C3.629,23.771,3.564,23.89,3.5,24.01z"></path>
+                           <path
+                              fill-rule="evenodd" clip-rule="evenodd"
+                              style="--dsn-color-icon : var(--heading-color)"
+                              d="M25.306,16.083c3.552,0.405,6.106,2.751,6.305,6.291  c0.022,0.39-0.47,0.808-0.723,1.212c-0.27-0.31-0.708-0.583-0.783-0.935c-0.595-2.77-2.146-4.448-5.048-4.813  c-0.33-0.04-0.586-0.662-0.876-1.014C24.64,16.521,25.099,16.218,25.306,16.083z"></path>
+                        </g>
+                     </svg>
+                  </div>
+                  <div class="service-content p-relative">
+                     <h4 class="service_title  title-block">Eco-Innovation for a Greener World</h4>
+                     <div class="service_description mt-10 max-w570 dsn-auto">
+                        <p>
+                           Embarking on an expedition to explore and uncover new and improved materials, driving us towards a sustainable future where innovation meets eco-consciousness.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="dsn-up service-item p-relative grid-item style-box">
+               <div class="service-item-inner number-item h-100 background-section border-rdu">
+                  <div class="dsn-icon">
+                     <img src="{% static 'assets/img/items/recycle-icon.png' %}"/>
+                  </div>
+                  <div class="service-content p-relative">
+                     <h4 class="service_title  title-block">Rethinking Fashion: From Waste to Style</h4>
+                     <div class="service_description mt-10 max-w570 dsn-auto">
+                        <p>
+                           Revolutionizing the fashion industry by transforming waste materials into stylish and sustainable products, merging sustainability and style in a groundbreaking way.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="dsn-up service-item p-relative grid-item style-box">
+               <div class="service-item-inner number-item h-100 background-section border-rdu">
+                  <div class="dsn-icon">
+                     <img src="{% static 'assets/img/items/leaf-icon.png' %}"/>
+                  </div>
+                  <div class="service-content p-relative">
+                     <h4 class="service_title  title-block">Empowering Sustainable Choices</h4>
+                     <div class="service_description mt-10 max-w570 dsn-auto">
+                        <p>
+                           Empowering individuals to make responsible fashion choices that positively impact the environment, as we support regenerative agriculture practices and work towards reducing waste in the fashion industry.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ========== End Service ========== -->
+   <!-- ========== Right Box With Image  ========== -->
+   <div class="right-box-image section-margin dsn-container dsn-left-container over-hidden p-relative">
+      <div class="box-img">
+         <div class="img-box-parallax h-v-80 w-100 before-z-index dsn-animate dsn-effect-left"
+            data-dsn-triggerhook="bottom"
+            data-dsn-grid="move-up" data-overlay="1">
+            <img src="{% static 'assets/img/items/straw_roll3.jpg' %}" class="cover-bg-img has-direction" alt=''/>
+         </div>
+      </div>
+      <div class="box-info background-section box-padding section-margin" data-dsn-gap="30px 30px">
+         <h2 class="title-h2 text-upper">Our Sustainable Impact</h2>
+         <p class="mt-20 pt-20 border-top">
+            Rice straw is a valuable resource that can support India by increasing its local energy supply while reducing its reliance on imports. We aim to utilize <span class="theme-color">5.4M tons</span> of rice straw. <span class="theme-color">1 ton</span> of rice straw burnt releases the equivalent of <span class="theme-color">1521.53 Kg</span> CO2. Hence we will reduce around <span class="theme-color">8.2M tons</span> of CO2 equivalent annually. This is roughly equal to the carbon footprint of Ottawa, Canada. Unlike cotton, we are not utilizing large quantities of water to manufacture our product. Our filling is completely biodegradable, unlike polyester and microplastics. Furthermore, depending on the market price of rice straw, farmers can expect to earn between <span class="theme-color">INR 550 and 1500 per ton</> of rice straw sold.
+         </p>
+         <div class="dsn-def-btn dsn-hover-icon mt-30">
+            <a class="dsn-btn background-main effect-ajax has-icon-left"
+               href="#" data-dsn-text="HEADPHONES"
+               data-dsn="parallax">
+            <span class="dsn-icon dsn-bg-before btn-icon-left heading-color z-index-1">
+            <i class="fas fa-angle-right"></i>
+            </span>
+            <span class="title-btn p-relative  z-index-1 heading-color">LEARN MORE</span>
+            </a>
+         </div>
+      </div>
+   </div>
+   <!-- ========== End Right Box With Image  ========== -->
+   <!-- ========== Portfolio ========== -->
+   <div class="p-relative over-hidden box-shadow-image box-image-transform dsn-style-cards section-margin ">
+      <div class="root-posts">
+         <div class="dsn-grid-layout dsn-grid dsn-posts dsn-post-type-cards use-horizontal-scroll box-image-normal"
+            data-dsn-option='{"speed":15,"start":"0"}'>
+            <article
+               class="dsn-item-post start-section  grid-item p-relative">
+               <h3 style="font-size:10rem" class="dsn-animate-up letter-stroke">OUR</h3>
+               <h3 style="font-size:10rem" class="dsn-animate-down letter-stroke">PRODUCTS</h3>
+            </article>
+            <article
+               class="dsn-item-post grid-item over-hidden p-relative box-hover-image swiper-slide v-dark-head">
+               <div class="box-content d-flex ">
+                  <a class="effect-ajax box-image-link bg-shadow" href="#"
+                     data-dsn-ajax="work" title="JACKETS">
+                     <div class="box-image-bg before-z-index dsn-swiper-parallax-transform"
+                        data-overlay="4">
+                        <img class="cover-bg-img" src="{% static 'assets/img/items/jacket-product.jpg' %}"
+                           alt=""/>
+                     </div>
+                  </a>
+                  <div class="post-content dsn-bg p-relative z-index-1 d-flex flex-column">
+                     <div class="post-title-info">
+                        <div class="post-meta max-w750">
+                           <div class="p-relative d-inline-block dsn-category dsn-bg metas mb-10 entry-meta">
+                              <span data-separator="&">Winterwear</span>
+                           </div>
+                        </div>
+                        <h2 class="post-title title-block">
+                           <a href="#" class="effect-ajax"
+                              data-dsn-ajax="work">
+                           JACKETS
+                           </a>
+                        </h2>
+                        <p class="section_description mt-15 max-w570 ">
+                           Stay warm in style with our jacket featuring exceptional insulation for ultimate comfort in winter.
+                        </p>
+                        <a href="#"
+                           class="effect-ajax dsn-post-link move-circle border-color-heading"
+                           data-dsn="parallax" data-dsn-ajax="work">
+                           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                              <path class="arrow-after"
+                                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article
+               class="dsn-item-post grid-item over-hidden p-relative box-hover-image swiper-slide v-dark-head">
+               <div class="box-content d-flex ">
+                  <a class="effect-ajax box-image-link bg-shadow" href="#"
+                     data-dsn-ajax="work" title="BAGS">
+                     <div class="box-image-bg before-z-index dsn-swiper-parallax-transform"
+                        data-overlay="3">
+                        <img class="cover-bg-img" src="{% static 'assets/img/items/bagmodel-product.jpg' %}"
+                           alt=""/>
+                     </div>
+                  </a>
+                  <div class="post-content dsn-bg p-relative z-index-1 d-flex flex-column">
+                     <div class="post-title-info">
+                        <div class="post-meta max-w750">
+                           <div class="p-relative d-inline-block dsn-category dsn-bg metas mb-10 entry-meta">
+                              <span data-separator=" & ">Accessories</span>
+                              {% comment %} <span data-separator=" & ">Production</span> {% endcomment %}
+                           </div>
+                        </div>
+                        <h2 class="post-title title-block">
+                           <a href="#" class="effect-ajax"
+                              data-dsn-ajax="work">
+                           Bags
+                           </a>
+                        </h2>
+                        <p class="section_description mt-15 max-w570 ">
+                           Experience the perfect blend of style and sustainability with our fiber-made bags, designed to withstand the test of time while providing ample storage for all your essentials
+                        </p>
+                        <a href="#"
+                           class="effect-ajax dsn-post-link move-circle border-color-heading"
+                           data-dsn="parallax" data-dsn-ajax="work">
+                           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                              <path class="arrow-after"
+                                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article
+               class="dsn-item-post grid-item over-hidden p-relative box-hover-image swiper-slide v-dark-head">
+               <div class="box-content d-flex ">
+                  <a class="effect-ajax box-image-link bg-shadow" href="#"
+                     data-dsn-ajax="work" title="OPEN RUN">
+                     <div class="box-image-bg before-z-index dsn-swiper-parallax-transform"
+                        data-overlay="2">
+                        <img class="cover-bg-img" src="{% static 'assets/img/items/pillow-product.jpg' %}"
+                           alt=""/>
+                     </div>
+                  </a>
+                  <div class="post-content dsn-bg p-relative z-index-1 d-flex flex-column">
+                     <div class="post-title-info">
+                        <div class="post-meta max-w750">
+                           <div class="p-relative d-inline-block dsn-category dsn-bg metas mb-10 entry-meta">
+                              <span data-separator=" & ">Home Accessories</span>
+                           </div>
+                        </div>
+                        <h2 class="post-title title-block">
+                           <a href="#" class="effect-ajax"
+                              data-dsn-ajax="work">
+                           Pillows
+                           </a>
+                        </h2>
+                        <p class="section_description mt-15 max-w570 ">
+                           Indulge in the utmost comfort and relaxation with our pillows, crafted with a smooth and luxurious texture that will cradle you in a cloud of pure comfort.
+                        </p>
+                        <a href="#"
+                           class="effect-ajax dsn-post-link move-circle border-color-heading"
+                           data-dsn="parallax" data-dsn-ajax="work">
+                           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                              <path class="arrow-after"
+                                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article
+               class="dsn-item-post grid-item over-hidden p-relative box-hover-image swiper-slide v-dark-head">
+               <div class="box-content d-flex ">
+                  <a class="effect-ajax box-image-link bg-shadow" href="#"
+                     data-dsn-ajax="work" title="BLANKET">
+                     <div class="box-image-bg before-z-index dsn-swiper-parallax-transform"
+                        data-overlay="2">
+                        <img class="cover-bg-img" src="{% static 'assets/img/items/blanket.jpg' %}"
+                           alt=""/>
+                     </div>
+                  </a>
+                  <div class="post-content dsn-bg p-relative z-index-1 d-flex flex-column">
+                     <div class="post-title-info">
+                        <div class="post-meta max-w750">
+                           <div class="p-relative d-inline-block dsn-category dsn-bg metas mb-10 entry-meta">
+                              <span data-separator=" & ">Home Accessories</span>
+                              {% comment %} <span data-separator=" & ">Production</span> {% endcomment %}
+                           </div>
+                        </div>
+                        <h2 class="post-title title-block">
+                           <a href="#" class="effect-ajax"
+                              data-dsn-ajax="work">
+                           Blankets
+                           </a>
+                        </h2>
+                        <p class="section_description mt-15 max-w570 ">
+                           Wrap yourself in the cozy embrace of our extraordinary blankets, bringing unparalleled comfort and warmth to your home.
+                        </p>
+                        <a href="#"
+                           class="effect-ajax dsn-post-link move-circle border-color-heading"
+                           data-dsn="parallax" data-dsn-ajax="work">
+                           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                              <path class="arrow-after"
+                                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article
+               class="dsn-item-post grid-item over-hidden p-relative box-hover-image swiper-slide v-dark-head">
+               <div class="box-content d-flex ">
+                  <a class="effect-ajax box-image-link bg-shadow" href="#"
+                     data-dsn-ajax="work" title="MEN FASHION">
+                     <div class="box-image-bg before-z-index dsn-swiper-parallax-transform"
+                        data-overlay="4">
+                        <img class="cover-bg-img" src="{% static 'assets/img/items/straw-items.jpg' %}"
+                           alt=""/>
+                     </div>
+                  </a>
+                  <div class="post-content dsn-bg p-relative z-index-1 d-flex flex-column">
+                     <div class="post-title-info">
+                        <div class="post-meta max-w750">
+                           <div class="p-relative d-inline-block dsn-category dsn-bg metas mb-10 entry-meta">
+                              <span data-separator=" & ">Fashion</span>
+                           </div>
+                        </div>
+                        <h2 class="post-title title-block">
+                           <a href="#" class="effect-ajax"
+                              data-dsn-ajax="work">
+                           Fashion
+                           </a>
+                        </h2>
+                        <p class="section_description mt-15 max-w570 ">
+                           Elevate your fashion game with our innovative fiber-based products, showcasing cutting-edge designs that seamlessly blend style and sustainability, making a bold statement for conscious fashion enthusiasts.
+                        </p>
+                        <a href="#"
+                           class="effect-ajax dsn-post-link move-circle border-color-heading"
+                           data-dsn="parallax" data-dsn-ajax="work">
+                           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                              <path class="arrow-after"
+                                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article
+               class="dsn-item-post grid-item over-hidden p-relative box-hover-image swiper-slide v-dark-head">
+               <div class="box-content d-flex ">
+                  <a class="effect-ajax box-image-link bg-shadow" href="#"
+                     data-dsn-ajax="work" title="CARPET">
+                     <div class="box-image-bg before-z-index dsn-swiper-parallax-transform"
+                        data-overlay="4">
+                        <img class="cover-bg-img" src="{% static 'assets/img/items/carpet.jpg' %}"
+                           alt=""/>
+                     </div>
+                  </a>
+                  <div class="post-content dsn-bg p-relative z-index-1 d-flex flex-column">
+                     <div class="post-title-info">
+                        <div class="post-meta max-w750">
+                           <div class="p-relative d-inline-block dsn-category dsn-bg metas mb-10 entry-meta">
+                              <span data-separator=" & ">Carpets</span>
+                              <span data-separator=" & ">Yoga Mats</span>
+                           </div>
+                        </div>
+                        <h2 class="post-title title-block">
+                           <a href="#" class="effect-ajax"
+                              data-dsn-ajax="work">
+                           Carpets
+                           </a>
+                        </h2>
+                        <p class="section_description mt-15 max-w570 ">
+                           Step into a world of comfort and elegance with our exquisite fiber-based carpets, meticulously crafted to add a touch of luxury and sophistication to your living spaces while promoting sustainable living.
+                        </p>
+                        <a href="#"
+                           class="effect-ajax dsn-post-link move-circle border-color-heading"
+                           data-dsn="parallax" data-dsn-ajax="work">
+                           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                              <path class="arrow-after"
+                                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article
+               class="dsn-item-post end-section grid-item p-relative">
+               <h2 class="dsn-animate-up letter-stroke">AWESOME</h2>
+               <h2 class="dsn-animate-down letter-stroke">DESIGNS</h2>
+            </article>
+         </div>
+      </div>
+   </div>
+   <!-- ========== End Portfolio ========== -->
+   <!-- ========== Brand ========== -->
+   <div class="p-relative section-padding background-section ">
+      <div class="container">
+         <div class="section-title mb-70 text-center d-flex flex-column">
+            <h2 class="title-h2 text-upper">
+               POTENTIAL BRAND PARTNERS
+            </h2>
+            <p class="max-w570 mt-20 border-section-bottom">
+               and many more...
+            </p>
+         </div>
+         <div class="d-grid grid-md-4 grid-sm-2 d-grid-no-space dsn-brand border-style" >
+            <div class="brand-item border-bottom border-right">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/peter-england-logo.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item border-bottom border-right">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/Raymond.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item border-bottom border-right">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/arvind-limited-logo.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item border-bottom">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/adidas-white.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item border-right">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/gap-white.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item border-right">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/HM-white.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item border-right">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/NF-white.png' %}" alt="" >
+               </div>
+            </div>
+            <div class="brand-item">
+               <div class="brand-item-inner  over-hidden p-relative ">
+                  <img src="{% static 'assets/img/brands/Puma-Logo-White.png' %}" alt="" >
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ========== End Brand ========== -->
+   <!-- ========== Footer ========== -->
+   <footer id="dsn_footer" class="dsn-footer p-relative footer-animate svg-animate background-main">
+      <svg class="dsn-separator dsn-separator-up  dsn-icon-assistant-color" width="100%" height="100%"
+         viewBox="0 0 100 10" preserveAspectRatio="none">
+         <path class="path-anim separator__path" data-dsn-to="M 0 0 C 40 0 55 0 100 0 L 0 0 Z"
+            vector-effect="non-scaling-stroke" d="M 0 0 C 40 16 75 10 100 0 L 0 0 Z"></path>
+      </svg>
+      <div class="footer-content p-relative mt-section">
+         <div class="text-center container">
+            <h2 class="title-h2 ">
+               Redefining Fashion
+               <span class="d-block"><b><i> Sustainably </i></b></span>
+            </h2>
+            <div class="dsn-icon-heading-color dsn-def-btn d-flex justify-content-center mt-30">
+               <a class="dsn-btn dsn-border border-color-default  background-section  effect-ajax has-icon-left"
+                  href="#" data-dsn-text="START A PROJECT">
+               <span class="dsn-icon dsn-bg-before btn-icon-left heading-color z-index-1">
+               <i class="fas fa-angle-right" aria-hidden="true"></i>
+               </span>
+               <span class="title-btn p-relative  z-index-1 ">Preorder Now</span>
+               </a>
+            </div>
+         </div>
+         <div class="dsn-container pt-60">
+            <div class="d-grid grid-lg-4 grid-md-2 ">
+               <div class="grid-col-1">
+                  <div class="dsn-logo main-logo">
+                     <div class="main-logo">
+                        <a href="#" data-dsn-text="StrawDeshi"
+                           class="custom-logo-link main-brand effect-ajax" rel="home">
+                        <img class="custom-logo logo-light" src="{% static 'general/img/logo.png' %}"
+                           alt="StrawDeshi"/>
+                        <img class="custom-logo logo-dark" src="{% static 'general/img/logo.png' %}"
+                           alt="StrawDeshi"/>
+                        </a>
+                     </div>
+                  </div>
+                  <ul class="dsn-socials box-social mt-20 dsn-icon-heading-color">
+                     <li><a href="#" target="_blank" rel="nofollow"
+                        class="init-color move-circle border-color-default" data-dsn="parallax"><span
+                        class="dsn-icon"><i class="fab fa-facebook-f"></i></span><span>FB</span></a>
+                     </li>
+                     <li><a href="#" target="_blank" rel="nofollow"
+                        class="init-color move-circle border-color-default" data-dsn="parallax"><span
+                        class="dsn-icon"><i class="fab fa-twitter"></i></span><span>TW</span></a>
+                     </li>
+                     <li><a href="#" target="_blank" rel="nofollow"
+                        class="init-color move-circle border-color-default" data-dsn="parallax"><span
+                        class="dsn-icon"><i
+                        class="fab fa-linkedin-in"></i></span><span>LN</span></a></li>
+                     <li><a href="#" target="_blank" rel="nofollow"
+                        class="init-color move-circle border-color-default" data-dsn="parallax"><span
+                        class="dsn-icon"><i class="fab fa-instagram"></i></span><span>IN</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="grid-col-2">
+                  <h4 class="subtitle p-relative line-shape  line-shape-after "><span
+                     class="background-revere ">NAVIGATION</span>
+                  </h4>
+                  <div class="menu-footer-menu-container">
+                     <ul id="menu-footer-menu" class="menu">
+                        <li class="menu-item">
+                           <a href="#" class="effect-ajax">HOME</a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#" class="effect-ajax">PRODUCTS</a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#" class="effect-ajax">NEWS</a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#" class="effect-ajax">ABOUT</a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#" class="effect-ajax">CONTACT</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="grid-col-3">
+                  <h4 class="subtitle p-relative line-shape  line-shape-after "><span
+                     class="background-revere ">CONTACT US</span>
+                  </h4>
+                  <div class="col-contact">
+                     <p><strong>E</strong> : <a class="link-hover" href="#"
+                        data-hover-text="daivik.agarwal@kgpian.iitkgp.ac.in">daivik.agarwal@kgpian.iitkgp.ac.in</a></p>
+                     <p class="mt-10"><strong>E</strong> : <a class="link-hover" href="#"
+                        data-hover-text="tanishq.mittal@kgpian.iitkgp.ac.in">tanishq.mittal@kgpian.iitkgp.ac.in</a></p>
+                     <p class="mt-10"><strong>E</strong> : <a class="link-hover" href="#"
+                        data-hover-text="ayushman@kgpian.iitkgp.ac.in">ayushman@kgpian.iitkgp.ac.in</a></p>
+                     <p class="over-hidden mt-10">
+                        <strong>M</strong> : <a class="link-hover" href="#"
+                           data-hover-text="+91 7008666971">+91 7008666971</a>
+                     </p>
+                  </div>
+               </div>
+               <div class="grid-col-4">
+                  <h4 class="subtitle p-relative line-shape  line-shape-after "><span
+                     class="background-revere ">ADDRESS</span>
+                  </h4>
+                  <div class="col-address">
+                     <p>
+                        RAJENDRA PRASAD HALL OF RESIDENCE<br/>
+                        INDIAN INSTITUTE OF KHARAGPUR<br/>
+                        WEST MIDNAPORE<br/>
+                        WEST BENGAL<br/>
+                        INDIA
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- ========== End Footer ========== -->
+</div>
+{% endblock %}

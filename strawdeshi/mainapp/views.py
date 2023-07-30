@@ -10,7 +10,7 @@ from django.contrib.auth.forms import AuthenticationForm #add this
 
 import git
 # from django.shortcuts import render
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
@@ -21,7 +21,7 @@ def update(request):
 		stored on PythonAnywhere in the git.Repo() as parameter.
 		Here the name of my directory is "test.pythonanywhere.com"
 		'''
-		repo = git.Repo("../") 
+		repo = git.Repo("../../") 
 		origin = repo.remotes.origin
 
 		origin.pull()

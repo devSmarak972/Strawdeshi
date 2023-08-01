@@ -600,6 +600,92 @@
 <!-- ========== End Header ========== -->
 {% endblock %}
 {% block mainbody %}
+<!-- Button trigger modal -->
+<button id="subscribeBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+   Subscribe Now!
+ </button>
+ 
+ <!-- Modal -->
+ <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content background-section">
+       <div class="modal-header">
+         <h5 class="modal-title" id="subscribeModalLabel">Subscribe to pilot</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <div class="form-box border-style box-padding d-flex flex-column h-100 flex-fill">
+            
+            <form
+              id="contact-form"
+              class="form h-100 w-100"
+              method="POST"
+              data-toggle="validator"
+              novalidate="true"
+            >
+              <input
+                type="hidden"
+                name="csrfmiddlewaretoken"
+                value="I7L1Qsi2oUCx8fZwwHtYG5N5Ea7dWE9ayglTpp15lxDbPhlHcYVx4aNuoJ70JFyJ"
+              />
+  
+              <div class="messages"></div>
+              <div
+                class="d-flex flex-column input__wrap controls jusityf-content-between h-100"
+                style="justify-content: space-evenly"
+              >
+                <div class="form-group">
+                  <div class="entry-box">
+                    <label class="text-uppercase">E-Mail *</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Type your Email Address"
+                      required="required"
+                      data-error="Valid email is required."
+                    />
+                  </div>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <div class="entry-box">
+                    <label class="text-uppercase">Password *</label>
+                    <input
+                      id="password"
+                      type="password"
+                      name="password"
+                      placeholder="Enter your password"
+                      required="required"
+                      data-error="Enter your password"
+                    />
+                  </div>
+                  <div class="help-block with-errors"></div>
+  
+                  <div class="text-right">
+                    <div
+                      class="d-inline-block dsn-btn background-theme heading-color px-4 py-3 rounded"
+                    >
+                      <input
+                        type="submit"
+                        value="Signup"
+                        class="background-color disabled"
+                      />
+                      <div class="icon-circle"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Subscribe</button>
+       </div>
+     </div>
+   </div>
+ </div>
 <div id="page_wrapper" class="wrapper">
    <!-- ========== About Section ========== -->
    <div class="about-section about-arc section-margin">

@@ -6586,3 +6586,12 @@ body.tax-product_tag #dsn_header, body.tax-product_cat #dsn_header {
   letter-spacing: -0.5px;
 }
 
+#subscribeBtn{
+  position:fixed;
+  bottom:1rem;
+  right:1rem;
+}
+.modal-content.background-section{
+  background-color:black!important;
+  --bs-modal-header-border-color:#C2A770;
+}

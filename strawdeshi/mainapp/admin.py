@@ -3,7 +3,8 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib.auth import authenticate  
 from django.contrib.auth.admin import UserAdmin  
-from mainapp.models import CustomUser
+# from mainapp.models import CustomUser
+from mainapp.models import *
 from mainapp.managers import CustomUserManager
 # from mainapp.forms import CustomUserChangeForm,CustomUserCreationForm
 # # Register your models here.  
@@ -28,4 +29,4 @@ from mainapp.managers import CustomUserManager
 #     ordering = ('email',)  
 #     filter_horizontal = ()  
   
-# admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(Subscriber)

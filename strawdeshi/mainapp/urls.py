@@ -21,8 +21,9 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path("update_server/", views.update, name="update"),
     path('', views.home),
-    path('2', views.home2),
-    path('card', views.card),
-    path('login', views.login_user),
-    path('register', views.register_user),
+    # path('2', views.home2),
+    # path('card', views.card),
+    # path('login', views.login_user),
+    # path('register', views.register_user),
+    # path('record/', views.addRecord),
 ]

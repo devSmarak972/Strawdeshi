@@ -6559,21 +6559,21 @@ body.tax-product_tag #dsn_header, body.tax-product_cat #dsn_header {
 }
 /*# sourceMappingURL=style.css.map */
 
-.auth .entry-box label {
+.form .entry-box label {
   /* font-family: var(--heading-font); */
   font-weight: 600;
   letter-spacing: 2px;
   color: var(--theme-color);
 }
-.auth .form-box .form-group {
+.form .form-box .form-group {
   width: 100%;
   margin-bottom: 30px;
 }
 
-.auth .entry-box input {
+.form .entry-box input {
   height: 100%;
 }
-.auth .entry-box input, .entry-box textarea {
+.form .entry-box input, .entry-box textarea {
   font-size: 16px;
   width: 100%;
   background-color: transparent;
@@ -6588,10 +6588,28 @@ body.tax-product_tag #dsn_header, body.tax-product_cat #dsn_header {
 
 #subscribeBtn{
   position:fixed;
+  z-index:1000;
   bottom:1rem;
   right:1rem;
+  background-color: #C2A770;
+  color:black;
 }
 .modal-content.background-section{
   background-color:black!important;
   --bs-modal-header-border-color:#C2A770;
+}
+.product-overlay{
+  opacity:0.5;
+}
+.coming-soon{
+  position: absolute;
+  /*margin: auto;
+  */z-index: 10;
+  left: 50%;
+  top:50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
 }
